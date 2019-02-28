@@ -3,6 +3,7 @@ Calculate No Sparge water with powershell
 
 Copy/Paste to powershell:</br>
 </br>
+Function NoSpargeVol(){
 #Batch size (Liters)</br>
 	$BatchSize = 23</br>
 #Grain Bill (Kg)</br>
@@ -15,7 +16,10 @@ Copy/Paste to powershell:</br>
 	$BoilOffLiter = 3</br>
 </br>
 $WaterNeeded = $BatchSize + ($BatchSize - ($BatchSize - (($MaltKg * $BrewEff) * $GrainAbs) - $BoilOffLiter))</br>
-Write-Host "You will need $WaterNeeded to reach your batch size of $BatchSize"
+Write-Host "You will need $WaterNeeded to reach your batch size of $BatchSize"</br>
+}</br>
+</br>
+NoSpargeVol
 </br>
 </br>
 </br>
