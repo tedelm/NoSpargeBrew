@@ -30,6 +30,7 @@ if(isset($BatchSize)){
 	$Echo_MashVolPerKg = number_format(($MaxMashWater/($MaltKg * $BrewEff)), 2);
 	$Echo_BeforeBoil = number_format($AddToBoilWater, 2);
 	$Echo_GrainNeeded = number_format(($MaltKg * $BrewEff), 2);	
+	$Echo_WaterNeeded = $WaterNeeded;	
 	
 }else{
 	$value_BatchSize = 23;
@@ -43,6 +44,7 @@ if(isset($BatchSize)){
 	$Echo_MashVolPerKg = "N/A";
 	$Echo_BeforeBoil = "N/A";
 	$Echo_GrainNeeded = "N/A";	
+	$Echo_WaterNeeded = "N/A";
 }
 
 ?>
@@ -53,7 +55,7 @@ if(isset($BatchSize)){
    <body>
    <h1>No Sparge Calculator</h1>
    </br>
-   <table class='tableClass'>
+   <table class='tableClass2'>
 	 <tr>
 		<td>Mash vol (L): <?php Echo $Echo_MashVol; ?></td>
 	 </tr>
@@ -66,6 +68,9 @@ if(isset($BatchSize)){
 	 <tr>	 
 		<td>You will need <?php Echo $Echo_GrainNeeded; ?> Kg malt</td>
 	 </tr>
+	 <tr>	 
+		<td>Total water needed (L): <?php Echo $Echo_WaterNeeded; ?></td>
+	 </tr>	 
 	</table>
 	</br>   
 	

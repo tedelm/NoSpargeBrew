@@ -29,6 +29,15 @@ tableClass {
   border: 0px;
   width: 100%
 }
+tableClass2 {
+  border: 0px;
+  width: 100%
+}
+tableClass2.td {
+  font-size: 38px;
+  color: #FFFFFF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif    
+}
 
 input[type=number], select {
   width: 100%;
