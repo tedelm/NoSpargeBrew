@@ -16,7 +16,7 @@ Function NoSpargeVol(){
 	$BoilOffLiter = 3</br>
 </br>
 $WaterNeeded = $BatchSize + ($BatchSize - ($BatchSize - (($MaltKg * $BrewEff) * $GrainAbs) - $BoilOffLiter))</br>
-Write-Host "You will need $WaterNeeded to reach your batch size of $BatchSize"</br>
+Write-Host "You will need $WaterNeeded L to reach your batch size of $BatchSize" L</br>
 }</br>
 </br>
 NoSpargeVol
