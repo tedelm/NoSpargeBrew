@@ -3,6 +3,7 @@ Calculate No Sparge water with powershell
 
 Copy/Paste to powershell:</br>
 </br>
+```
 Function NoSpargeVol(){
 #Batch size (Liters)</br>
 	$BatchSize = 23</br>
@@ -20,6 +21,7 @@ Write-Host -BackgroundColor yellow -ForegroundColor red "You will need $WaterNee
 }</br>
 </br>
 NoSpargeVol
+```
 </br>
 </br>
 </br>
