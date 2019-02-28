@@ -7,6 +7,8 @@ Copy/Paste to powershell:</br>
 Function NoSpargeVol(){ 
 	#Batch size (Liters)
 	$BatchSize = 23
+	#Max Boil vol (GrainFater = 30L)
+	$MaxBoilVol = 30
 	#Grain Bill (Kg)
 	$MaltKg = 5.5
 	#Grain Absorption (Liter/Kg)
@@ -18,9 +20,18 @@ Function NoSpargeVol(){
 
 	$WaterNeeded = $BatchSize + ($BatchSize - ($BatchSize - (($MaltKg * $BrewEff) * $GrainAbs) - $BoilOffLiter))
 	Write-Host -BackgroundColor yellow -ForegroundColor red "You will need $WaterNeeded L to reach your batch size of $BatchSize L" 
+	
+	#Max mash vol
+	$MaxMashWater = $MaxBoilVol - ($MaltKg * $BrewEff)
+	Write-Host -BackgroundColor yellow -ForegroundColor red "Mash vol: $MaxMashWater" 
+	#Water to be added before boil
+	$AddToBoilWater = $WaterNeeded - $MaxMashWater
+	Write-Host -BackgroundColor yellow -ForegroundColor red "Add before boil: $AddToBoilWater" 
 }
 
 NoSpargeVol 
+
+
 ```
 </br>
 </br>
