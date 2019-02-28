@@ -1,20 +1,24 @@
 # NoSpargeBrew
 Calculate No Sparge water with powershell
 
-Copy/Paste to powershell:
-
-#Batch size (Liters)
-	$BatchSize = 23
-#Grain Bill (Kg)
-	$MaltKg = 5.5
-#Grain Absorption (Liter/Kg)
-	$GrainAbs = 1
-#No sparge brewhouse eff 1.2 = 120% malt needed to reach original sparge OG
-	$BrewEff = 1.2
-#Boil Off (Liters)
-	$BoilOffLiter = 3
-
-$BatchSize + ($BatchSize - ($BatchSize - (($MaltKg * $BrewEff) * $GrainAbs) - $BoilOffLiter))
+Copy/Paste to powershell:</br>
+</br>
+#Batch size (Liters)</br>
+	$BatchSize = 23</br>
+#Grain Bill (Kg)</br>
+	$MaltKg = 5.5</br>
+#Grain Absorption (Liter/Kg)</br>
+	$GrainAbs = 1</br>
+#No sparge brewhouse eff 1.2 = 120% malt needed to reach original sparge OG</br>
+	$BrewEff = 1.2</br>
+#Boil Off (Liters)</br>
+	$BoilOffLiter = 3</br>
+</br>
+$BatchSize + ($BatchSize - ($BatchSize - (($MaltKg * $BrewEff) * $GrainAbs) - $BoilOffLiter))</br>
+</br>
+</br>
+</br>
+</br>
 
 
 
