@@ -5,6 +5,7 @@ Copy/Paste to powershell:</br>
 </br>
 ```
 Function NoSpargeVol(){ 
+#Edit below to match your grain bill and batch size
 	#Batch size (Liters)
 	$BatchSize = 23
 	#Max Boil vol (GrainFater = 30L)
@@ -18,6 +19,7 @@ Function NoSpargeVol(){
 	#Boil Off (Liters)
 	$BoilOffLiter = 3
 
+#No edit below
 	$WaterNeeded = $BatchSize + ($BatchSize - ($BatchSize - (($MaltKg * $BrewEff) * $GrainAbs) - $BoilOffLiter))
 	Write-Host -BackgroundColor yellow -ForegroundColor red "You will need $WaterNeeded L to reach your batch size of $BatchSize L" 
 	
