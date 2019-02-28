@@ -1,5 +1,5 @@
 # NoSpargeBrew
-Calculate No Sparge water with powershell or PHP
+Calculate "No Sparge" water with powershell or PHP
 
 # PHP
 Demo: http://softwaist.se/NoSparge/index.php?action=calc
