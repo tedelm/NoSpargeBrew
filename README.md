@@ -1,8 +1,17 @@
 # NoSpargeBrew
-Calculate No Sparge water with powershell
+Calculate No Sparge water with powershell or PHP
 
+# PHP
+Demo: http://softwaist.se/NoSparge/index.php?action=calc
+</br>
+Source: https://github.com/tedelm/NoSpargeBrew/blob/master/PHP/index.php
+</br>
+</br>
+
+# PowerShell
 Copy/Paste to powershell:</br>
 </br>
+
 ```
 Function NoSpargeVol(){ 
 	#Batch size (Liters)
