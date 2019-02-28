@@ -14,7 +14,8 @@ Copy/Paste to powershell:</br>
 #Boil Off (Liters)</br>
 	$BoilOffLiter = 3</br>
 </br>
-$BatchSize + ($BatchSize - ($BatchSize - (($MaltKg * $BrewEff) * $GrainAbs) - $BoilOffLiter))</br>
+$WaterNeeded = $BatchSize + ($BatchSize - ($BatchSize - (($MaltKg * $BrewEff) * $GrainAbs) - $BoilOffLiter))</br>
+Write-Host "You will need $WaterNeeded to reach your batch size of $BatchSize"
 </br>
 </br>
 </br>
