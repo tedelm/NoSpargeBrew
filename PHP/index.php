@@ -9,11 +9,15 @@ switch ($_GET['action']) {
         $GrainAbs = $_POST['GrainAbs'];
         $BrewEff = $_POST['BrewEff']; 
         $BoilOffLiter = $_POST['BoilOffLiter'];
+		$Hops = $_POST['Hops'];
 	
 		#Calculate
 		$WaterNeeded = $BatchSize + ($BatchSize - ($BatchSize - (($MaltKg * $BrewEff) * $GrainAbs) - $BoilOffLiter));
 		$MaxMashWater = $MaxBoilVol - ($MaltKg * $BrewEff);
-		$AddToBoilWater = $WaterNeeded - $MaxMashWater;
+		$AddToBoilWater_nohops = $WaterNeeded - $MaxMashWater;
+		#Calculate hops absorption
+		$AddToBoilWater = $AddToBoilWater_nohops + (0.005 * $Hops);
+		
 		
     break;
 }
@@ -25,12 +29,13 @@ if(isset($BatchSize)){
 	$value_GrainAbs = $GrainAbs;
 	$value_BrewEff = $BrewEff;
 	$value_BoilOffLiter = $BoilOffLiter;
+	$value_Hops = $Hops;
 	
 	$Echo_MashVol = number_format($MaxMashWater, 2);
 	$Echo_MashVolPerKg = number_format(($MaxMashWater/($MaltKg * $BrewEff)), 2);
 	$Echo_BeforeBoil = number_format($AddToBoilWater, 2);
 	$Echo_GrainNeeded = number_format(($MaltKg * $BrewEff), 2);	
-	$Echo_WaterNeeded = $WaterNeeded;	
+	$Echo_WaterNeeded = $WaterNeeded + (0.005 * $Hops);	
 	
 }else{
 	$value_BatchSize = 23;
@@ -39,6 +44,7 @@ if(isset($BatchSize)){
 	$value_GrainAbs = 1;
 	$value_BrewEff = 1.2;
 	$value_BoilOffLiter = 3;
+	$value_Hops = 100;	
 	
 	$Echo_MashVol = "N/A";
 	$Echo_MashVolPerKg = "N/A";
@@ -91,6 +97,9 @@ if(isset($BatchSize)){
 		<tr>
 			<td>No sparge brewhouse eff:</td><td><input class='inputClass' type="number" step='any' value='<?php echo $value_BrewEff; ?>' name='BrewEff' /></td>
 		</tr>
+		<tr>
+			<td>Hops in boil (g):</td><td><input class='inputClass' type="number" step='any' value='<?php echo $value_Hops; ?>' name='Hops' /></td>
+		</tr>		
 		<tr>
 			<td>Boil Off (Liters):</td><td><input class='inputClass' type="number" step='any' value='<?php echo $value_BoilOffLiter; ?>' name='BoilOffLiter' /></td>
 		</tr>
