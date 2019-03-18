@@ -6,6 +6,10 @@ Demo: http://softwaist.se/NoSparge/index.php?action=calc
 </br>
 Source: https://github.com/tedelm/NoSpargeBrew/blob/master/PHP/index.php
 </br>
+Calculate Sugar Addition:
+</br>
+http://softwaist.se/NoSparge/sg.php
+</br>
 </br>
 
 # PowerShell
