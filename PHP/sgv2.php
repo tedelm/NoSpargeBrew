@@ -33,7 +33,7 @@ if(isset($Sugars)){
 
     $SGResult = number_format(($AmountToAdd), 3);
 
-    $EchoResult = "You will have to add $SGResult Kg of $Sugars to get from $MeasuredSG to $WantedSG",
+    $EchoResult = "You will have to add $SGResult Kg of $Sugars to get from $MeasuredSG to $WantedSG";
 	
 }else{
     
