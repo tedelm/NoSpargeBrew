@@ -10,8 +10,9 @@ function calculateWort($SG,$Wanted_SG,$Batchsize,$Wanted_IBU){
     $MissingIBU = ($Wanted_IBU/$batchsize)*$waterToAdd
     Write-host "Your wort will be missing $MissingIBU IBU after adding $waterToAdd liters of water"
 
+    Write-host "End wort volume will be $($waterToAdd + $Batchsize)"
+
 }
 
 calculateWort -SG 1.050 -Wanted_SG 1.045 -Wanted_IBU 30 -Batchsize 23
-
 
