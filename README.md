@@ -51,7 +51,10 @@ NoSpargeVol
 </br>
 </br>
 # Powershell - Misc
+</br>
 -Dilute wort (<a href='https://github.com/tedelm/NoSpargeBrew/blob/master/diluteWort.ps1'>Link</a>)
+</br>
+
 ```
 function calculateWort($SG,$Wanted_SG,$Batchsize,$Wanted_IBU){
 
@@ -71,6 +74,7 @@ function calculateWort($SG,$Wanted_SG,$Batchsize,$Wanted_IBU){
 
 calculateWort -SG 1.050 -Wanted_SG 1.045 -Wanted_IBU 30 -Batchsize 23
 ```
+
 </br>
 </br>
 
