@@ -63,6 +63,9 @@ if(isset($BatchSize)){
    </br>
    <table class='tableClass2'>
 	 <tr>
+		<td><a href='http://softwaist.se/NoSparge/index.php'>No Sparge Calculator</a> | <a href='http://softwaist.se/NoSparge/sg.php'>Add sugars</a> | <a href='http://softwaist.se/NoSparge/sgv2.php'>Calc extract</a> | <a href='http://softwaist.se/NoSparge/sgv3.php'>Dilute wort</a> </td>
+	 </tr>           		
+	 <tr>
 		<td>Mash vol (L): <?php Echo $Echo_MashVol; ?></td>
 	 </tr>
 	 <tr>
