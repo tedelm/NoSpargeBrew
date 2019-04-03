@@ -1,10 +1,10 @@
 <?php
 
-//1000+(375*0.1)/10
+//1000+(375*0.1)/12
 //1000 = sg konvertering
 //375 = socker
 //0.1 = 100g
-//10 = 10 liter
+//12 = 12 liter
 
 switch ($_GET['action']) {
     case "calc":
@@ -20,16 +20,18 @@ switch ($_GET['action']) {
 if(isset($Sugars)){
 
     if($Sugars == 'Sugar'){
-        #Table Sugar = 1.0375
         $Sugars_SG = 375;
     }
     if($Sugars == 'Malt Extract'){
-        #Malt Extract = 1.0350
         $Sugars_SG = 350;
     }
 
-    $SGResult = number_format((1000+($Sugars_SG*$SugarsKG)/$BatchSize), 0);
-	
+    $SGResult = number_format((1000+($Sugars_SG*$SugarsKG)/$BatchSize), 2);
+	$Result = "$SugarsKG Kg $Sugars will raise SG with: $SGResult";
+}else{
+    
+    $BatchSize = '23';
+    $SugarsKG = '0.250';
 }
 
 ?>
@@ -39,10 +41,12 @@ if(isset($Sugars)){
 <html>
    <body>
    <h1>Specific Gravity Calculator</h1>
-   </br>
    <table class='tableClass2'>
 	 <tr>
-		<td><?php Echo "$SugarsKG Kg $Sugars will rais SG with: $SGResult"; ?></td>
+		<td><a href='http://softwaist.se/NoSparge/index.php'>No Sparge Calculator</a> | <a href='http://softwaist.se/NoSparge/sg.php'>Add sugars</a> | <a href='http://softwaist.se/NoSparge/sgv2.php'>Calc extract</a> | <a href='http://softwaist.se/NoSparge/sgv3.php'>Dilute wort</a> </td>
+	 </tr>        
+	 <tr>
+		<td><?php Echo $Result; ?></td>
 	 </tr>
 	</table>
 	</br>   
